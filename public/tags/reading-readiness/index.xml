@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Reading Readiness on Early Reading Tools</title>
+    <link>https://earlyreadingtools.com/tags/reading-readiness/</link>
+    <description>Recent content in Reading Readiness on Early Reading Tools</description>
+    <image>
+      <title>Early Reading Tools</title>
+      <url>https://earlyreadingtools.com/images/og-default.png</url>
+      <link>https://earlyreadingtools.com/images/og-default.png</link>
+    </image>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 10 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://earlyreadingtools.com/tags/reading-readiness/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Reading Readiness: 10 Signs Your Child Is Ready to Learn to Read</title>
+      <link>https://earlyreadingtools.com/blog/reading-readiness/</link>
+      <pubDate>Mon, 10 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://earlyreadingtools.com/blog/reading-readiness/</guid>
+      <description>Learn the 10 signs of reading readiness in children ages 3–6, and what to do if your child isn&amp;#39;t showing them yet. When to start phonics instruction.</description>
+    </item>
+    <item>
+      <title>How to Teach Your Child to Read at Home: A Step-by-Step Parent&#39;s Guide</title>
+      <link>https://earlyreadingtools.com/blog/how-to-teach-child-to-read/</link>
+      <pubDate>Mon, 20 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://earlyreadingtools.com/blog/how-to-teach-child-to-read/</guid>
+      <description>A complete guide for parents on how to teach a child to read — covering phonemic awareness, phonics, sight words, fluency, and comprehension in the right order.</description>
+    </item>
+  </channel>
+</rss>

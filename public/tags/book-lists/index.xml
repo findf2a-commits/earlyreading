@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Book Lists on Early Reading Tools</title>
+    <link>https://earlyreadingtools.com/tags/book-lists/</link>
+    <description>Recent content in Book Lists on Early Reading Tools</description>
+    <image>
+      <title>Early Reading Tools</title>
+      <url>https://earlyreadingtools.com/images/og-default.png</url>
+      <link>https://earlyreadingtools.com/images/og-default.png</link>
+    </image>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 01 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://earlyreadingtools.com/tags/book-lists/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Best Books for Beginning Readers: A Leveled Book List by Stage</title>
+      <link>https://earlyreadingtools.com/blog/best-books-beginning-readers/</link>
+      <pubDate>Sat, 01 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://earlyreadingtools.com/blog/best-books-beginning-readers/</guid>
+      <description>A curated list of the best books for beginning readers — organized by reading stage, from first decodable books through early chapter books.</description>
+    </item>
+  </channel>
+</rss>

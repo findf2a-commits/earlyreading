@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Categories on Early Reading Tools</title>
+    <link>https://earlyreadingtools.com/categories/</link>
+    <description>Recent content in Categories on Early Reading Tools</description>
+    <image>
+      <title>Early Reading Tools</title>
+      <url>https://earlyreadingtools.com/images/og-default.png</url>
+      <link>https://earlyreadingtools.com/images/og-default.png</link>
+    </image>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 28 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://earlyreadingtools.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Reviews</title>
+      <link>https://earlyreadingtools.com/categories/reviews/</link>
+      <pubDate>Mon, 28 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://earlyreadingtools.com/categories/reviews/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Activities</title>
+      <link>https://earlyreadingtools.com/categories/activities/</link>
+      <pubDate>Mon, 10 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://earlyreadingtools.com/categories/activities/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sight Words</title>
+      <link>https://earlyreadingtools.com/categories/sight-words/</link>
+      <pubDate>Sat, 01 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://earlyreadingtools.com/categories/sight-words/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Guides</title>
+      <link>https://earlyreadingtools.com/categories/guides/</link>
+      <pubDate>Sat, 15 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://earlyreadingtools.com/categories/guides/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Parent Guides</title>
+      <link>https://earlyreadingtools.com/categories/parent-guides/</link>
+      <pubDate>Mon, 10 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://earlyreadingtools.com/categories/parent-guides/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Book Lists</title>
+      <link>https://earlyreadingtools.com/categories/book-lists/</link>
+      <pubDate>Sat, 01 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://earlyreadingtools.com/categories/book-lists/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>How-to Guides</title>
+      <link>https://earlyreadingtools.com/categories/how-to-guides/</link>
+      <pubDate>Mon, 20 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://earlyreadingtools.com/categories/how-to-guides/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
