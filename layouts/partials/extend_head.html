@@ -1,0 +1,79 @@
+<meta name="theme-color" content="#2563eb">
+
+{{/* Reading progress bar element */}}
+<div id="ert-progress"></div>
+
+{{/* ── Schema.org: WebSite (home only) ── */}}
+{{ if .IsHome }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Early Reading Tools",
+  "url": "https://earlyreadingtools.com",
+  "description": "Free phonics guides, sight word lists, and expert tips to help your child learn to read.",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": { "@type": "EntryPoint", "urlTemplate": "https://earlyreadingtools.com/search/?q={search_term_string}" },
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+{{ end }}
+
+{{/* ── Schema.org: Review (review layout pages) ── */}}
+{{ if and .IsPage (eq .Layout "review") }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Review",
+  "name": {{ .Title | jsonify }},
+  "description": {{ .Description | jsonify }},
+  "datePublished": "{{ .Date.Format "2006-01-02" }}",
+  "dateModified": "{{ .Lastmod.Format "2006-01-02" }}",
+  "author": { "@type": "Organization", "name": "Early Reading Tools", "url": "https://earlyreadingtools.com" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Early Reading Tools",
+    "logo": { "@type": "ImageObject", "url": "https://earlyreadingtools.com/images/logo.png" }
+  },
+  "itemReviewed": {
+    "@type": "Product",
+    "name": {{ (.Param "reviewProduct") | default .Title | jsonify }},
+    "brand": { "@type": "Brand", "name": {{ (.Param "reviewProduct") | default "" | jsonify }} }
+  },
+  "reviewRating": {
+    "@type": "Rating",
+    "ratingValue": {{ (.Param "reviewRating") | default "4" | jsonify }},
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "{{ .Permalink }}" }
+}
+</script>
+{{ end }}
+
+{{/* ── Schema.org: Article (all other single pages) ── */}}
+{{ if and .IsPage (not .IsHome) (ne .Layout "review") }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": {{ .Title | jsonify }},
+  "description": {{ .Description | jsonify }},
+  "datePublished": "{{ .Date.Format "2006-01-02" }}",
+  "dateModified": "{{ .Lastmod.Format "2006-01-02" }}",
+  "author": { "@type": "Organization", "name": "Early Reading Tools", "url": "https://earlyreadingtools.com" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Early Reading Tools",
+    "logo": { "@type": "ImageObject", "url": "https://earlyreadingtools.com/images/logo.png" }
+  },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "{{ .Permalink }}" }
+}
+</script>
+{{ end }}
+
+
+{{/* ── Canonical ── */}}
+<link rel="canonical" href="{{ .Permalink }}">

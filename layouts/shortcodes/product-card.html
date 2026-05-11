@@ -1,0 +1,26 @@
+<div class="ert-product-card{{ if eq (.Get "top") "true" }} ert-product-card--top{{ end }}">
+  <div class="ert-product-card__badge-wrap">
+    {{ with .Get "rank" }}<span class="ert-product-card__rank">{{ . }}</span>{{ end }}
+    {{ with .Get "label" }}<span class="ert-product-card__best">{{ . }}</span>{{ end }}
+  </div>
+  <div class="ert-product-card__emoji">{{ .Get "emoji" | default "📦" }}</div>
+  <div>
+    <div class="ert-product-card__name">{{ .Get "name" }}</div>
+    <div class="ert-product-card__stars">
+      {{ range seq (.Get "stars" | default "5" | int) }}★{{ end }}
+      <span>{{ .Get "stars" | default "5" }}/5</span>
+    </div>
+    <div class="ert-product-card__price">Price: {{ .Get "price" | default "See site" }}</div>
+    <p class="ert-product-card__desc">{{ .Get "desc" }}</p>
+    {{ with .Get "pros" }}
+    <ul class="ert-product-card__pros">
+      {{ range split . "|" }}<li>{{ . }}</li>{{ end }}
+    </ul>
+    {{ end }}
+    {{ with .Get "link" }}
+    <a href="{{ . }}" class="ert-product-card__link" rel="nofollow noopener" target="_blank">
+      {{ $.Get "cta" | default "Check Price & Details →" }}
+    </a>
+    {{ end }}
+  </div>
+</div>

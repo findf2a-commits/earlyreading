@@ -1,0 +1,98 @@
+{{- define "main" }}
+{{/* Widen the main container to fit content + sidebar */}}
+<style>.main{--main-width:1080px}</style>
+
+<div class="review-wrap">
+
+  {{/* ── Main article column ── */}}
+  <article class="post-single review-main">
+    <header class="post-header">
+      {{ partial "breadcrumbs.html" . }}
+      <h1 class="post-title entry-hint-parent">{{ .Title }}</h1>
+      {{- if .Description }}
+      <div class="post-description">{{ .Description }}</div>
+      {{- end }}
+      {{- if not (.Param "hideMeta") }}
+      <div class="post-meta">
+        {{- partial "post_meta.html" . -}}
+        {{- partial "translation_list.html" . -}}
+        {{- partial "edit_post.html" . -}}
+        {{- partial "post_canonical.html" . -}}
+      </div>
+      {{- end }}
+    </header>
+
+    {{- $isHidden := (.Param "cover.hiddenInSingle") | default (.Param "cover.hidden") | default false }}
+    {{- partial "cover.html" (dict "cxt" . "IsSingle" true "isHidden" $isHidden) }}
+    {{- if (.Param "ShowToc") }}
+    {{- partial "toc.html" . }}
+    {{- end }}
+
+    {{- if .Content }}
+    <div class="post-content md-content">
+      {{- if not (.Param "disableAnchoredHeadings") }}
+      {{- partial "anchored_headings.html" .Content -}}
+      {{- else }}{{ .Content }}{{ end }}
+    </div>
+    {{- end }}
+
+    <footer class="post-footer">
+      {{- $tags := .Language.Params.Taxonomies.tag | default "tags" }}
+      <ul class="post-tags">
+        {{- range ($.GetTerms $tags) }}
+        <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
+        {{- end }}
+      </ul>
+      {{- if (.Param "ShowPostNavLinks") }}
+      {{- partial "post_nav_links.html" . }}
+      {{- end }}
+      {{- if (and site.Params.ShowShareButtons (ne .Params.disableShare true)) }}
+      {{- partial "share_icons.html" . -}}
+      {{- end }}
+    </footer>
+
+    {{- if (.Param "comments") }}
+    {{- partial "comments.html" . }}
+    {{- end }}
+  </article>
+
+  {{/* ── Sidebar column ── */}}
+  <aside class="review-sidebar" aria-label="Sidebar">
+    <div class="review-sidebar__inner">
+
+      {{/* AWIN sidebar ad — s=4332896 */}}
+      <div class="ert-sidebar-ad">
+        <p class="ert-ad-label">Sponsored</p>
+        <!-- START ADVERTISER: Sandviks HOP from awin.com -->
+        <a rel="sponsored" href="https://www.awin1.com/cread.php?s=4332896&v=91321&q=565662&r=2033285" target="_blank" rel="noopener noreferrer">
+          <img src="https://www.awin1.com/cshow.php?s=4332896&v=91321&q=565662&r=2033285" border="0" alt="Hooked on Phonics" loading="lazy" width="300" style="width:100%;height:auto;border-radius:8px;display:block">
+        </a>
+        <!-- END ADVERTISER: Sandviks HOP from awin.com -->
+      </div>
+
+      {{/* Quick verdict card */}}
+      <div class="review-sidebar__card">
+        <p class="review-sidebar__label">🎯 Quick Verdict</p>
+        <div class="review-sidebar__score">4.2<span>/5</span></div>
+        <p class="review-sidebar__stars">★★★★☆ Ages 3–8</p>
+        <p class="review-sidebar__desc">Systematic phonics with decodable books. The $1 first month is genuinely low risk.</p>
+        <a rel="sponsored" href="https://www.awin1.com/awclick.php?gid=565661&mid=91321&awinaffid=2033285&linkid=4332880&clickref=" class="review-sidebar__btn" target="_blank" rel="noopener noreferrer">
+          Try for $1 + Free Activity Pad →
+        </a>
+        <small class="review-sidebar__fine">Affiliate link · cancel anytime</small>
+      </div>
+
+      {{/* Free resources card */}}
+      <div class="review-sidebar__card">
+        <p class="review-sidebar__label">📚 Free Phonics Kit</p>
+        <p class="review-sidebar__desc">30 structured lessons, decodable word lists, and sight word games — no email required.</p>
+        <a href="/guides/phonics-starter-kit/" class="review-sidebar__btn review-sidebar__btn--dark">
+          Get Free Starter Kit →
+        </a>
+      </div>
+
+    </div>
+  </aside>
+
+</div>
+{{- end }}

@@ -1,0 +1,131 @@
+baseURL = "https://earlyreadingtools.com/"
+languageCode = "en-us"
+title = "Early Reading Tools"
+theme = "PaperMod"
+googleAnalytics = "G-0RH903EJCX"
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+enableEmoji = true
+
+[pagination]
+  pagerSize = 10
+
+[minify]
+  disableXML = true
+  minifyOutput = true
+
+[params]
+  env = "production"
+  title = "Early Reading Tools"
+  description = "Free phonics guides, sight word lists, decodable readers, and expert tips to help your child learn to read — faster and with more confidence."
+  keywords = ["early reading", "phonics for kids", "teach child to read", "sight words", "reading readiness", "phonics activities", "beginning readers"]
+  author = "Early Reading Tools Team"
+  images = ["/images/og-default.png"]
+  DateFormat = "January 2, 2006"
+  defaultTheme = "light"
+  disableThemeToggle = false
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = false
+  ShowWordCount = false
+  ShowRssButtonInSectionTermList = true
+  UseHugoToc = true
+  disableSpecial1stPost = false
+  disableScrollToTop = false
+  comments = false
+  hidemeta = false
+  hideSummary = false
+  showtoc = true
+  tocopen = false
+  mainSections = ["blog", "guides"]
+
+  [params.homeInfoParams]
+    Title = "Help Your Child Learn to Read — Starting Today"
+    Content = """
+Every child can become a confident reader. Whether you're just getting started with the alphabet or helping your early reader tackle chapter books, you'll find free phonics lessons, printable sight word lists, curated book recommendations, and research-backed strategies — all in one place.
+
+**[Get the Free Phonics Starter Kit →](/guides/phonics-starter-kit/)**
+"""
+
+  [[params.socialIcons]]
+    name = "pinterest"
+    url = "https://pinterest.com/earlyreadingtools"
+
+  [[params.socialIcons]]
+    name = "facebook"
+    url = "https://facebook.com/earlyreadingtools"
+
+  [[params.socialIcons]]
+    name = "rss"
+    url = "/index.xml"
+
+  [params.analytics.google]
+    SiteVerificationTag = ""
+
+  [params.cover]
+    hidden = false
+    hiddenInList = false
+    hiddenInSingle = false
+
+  [params.label]
+    text = "Early Reading Tools"
+    icon = "/apple-touch-icon.png"
+    iconHeight = 35
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+  series = "series"
+
+[menu]
+  [[menu.main]]
+    identifier = "nav-phonics"
+    name = "Phonics"
+    url = "/tags/phonics/"
+    weight = 10
+
+  [[menu.main]]
+    identifier = "nav-sightwords"
+    name = "Sight Words"
+    url = "/tags/sight-words/"
+    weight = 20
+
+  [[menu.main]]
+    identifier = "nav-activities"
+    name = "Activities"
+    url = "/tags/activities/"
+    weight = 30
+
+  [[menu.main]]
+    identifier = "nav-books"
+    name = "Book Lists"
+    url = "/tags/book-lists/"
+    weight = 40
+
+  [[menu.main]]
+    identifier = "nav-guides"
+    name = "Guides"
+    url = "/guides/"
+    weight = 50
+
+  [[menu.main]]
+    identifier = "nav-about"
+    name = "About"
+    url = "/about/"
+    weight = 60
+
+  [[menu.main]]
+    identifier = "search"
+    name = "Search"
+    url = "/search/"
+    weight = 70

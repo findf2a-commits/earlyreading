@@ -1,0 +1,5 @@
+<div class="ert-cta-box">
+  {{ with .Get "title" }}<h3>{{ . }}</h3>{{ end }}
+  {{ with .Get "body" }}<p>{{ . }}</p>{{ end }}
+  {{ with .Get "link" }}<a href="{{ . }}">{{ $.Get "label" | default "Read the Free Guide →" }}</a>{{ end }}
+</div>

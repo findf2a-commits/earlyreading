@@ -1,0 +1,8 @@
+<div class="ert-email-inline">
+  <h3>{{ .Get "title" | default "Get the Free Phonics Starter Kit" }}</h3>
+  <p>{{ .Get "body" | default "30 step-by-step lessons, printable flashcards, and a complete phonics sequence — free, no email required." }}</p>
+  <a href="{{ .Get "link" | default "/guides/phonics-starter-kit/" }}">
+    {{ .Get "label" | default "Access the Free Kit →" }}
+  </a>
+  <small>No signup · Instant access · 100% free</small>
+</div>

@@ -1,0 +1,10 @@
+{
+  "name": "earlyreadingtools",
+  "compatibility_date": "2026-04-28",
+  "assets": {
+    "directory": "./public"
+  },
+  "build": {
+    "command": "hugo --gc --minify"
+  }
+}
